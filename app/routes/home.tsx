@@ -1,13 +1,13 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { LogoGenerator } from "./logo-generator";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Aperture Science logo generator" },
+    { name: "description", content: "Generate the Aperture Science logo with custom text." },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <LogoGenerator />;
 }

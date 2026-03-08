@@ -1,15 +1,84 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+  font-family: 'Univers Black';
+  src: url('./assets/UniversBlack.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Univers Next Pro Extended';
+  src: url('./assets/UniversNextPro-Ext.ttf') format('truetype');
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+.parentElement {
+  padding: 0.5%;
+  margin: 2%;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.logo {
+  display:flex;
+  justify-content: center;
+}
+.logoIris {
+  height: 13rem;
+  min-width: 13rem;
+}
+.logoTitle {
+  font-family: 'Univers Black', Arial, sans-serif;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 6.3rem;
+  line-height: 100%;
+  letter-spacing: 0.55rem;
+  margin-top:2.9rem;
+  text-wrap: nowrap;
+}
+.logoSubtitle {
+  font-family: 'Univers Next Pro Extended', Arial, sans-serif;
+  font-style: normal;
+  font-size: 2.8rem;
+  margin-top: -0.3rem;
+  letter-spacing: 1.08rem;
+  line-height: 100%;
+  text-wrap: wrap;
+}
+
+.fields {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2%;
+  padding: 1%;
+}
+input {
+  outline:1px solid black;
+  background-color:lightgrey;
+  border-radius: 5px;
+  padding: 2%;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  outline: none;
+}
+
+.footer {
+  padding: 2%;
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  color: grey;
+}
+
+.footer a {
+  text-decoration: underline;
+  
 }
